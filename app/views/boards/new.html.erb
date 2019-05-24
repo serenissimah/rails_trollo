@@ -1,0 +1,6 @@
+<h3>Add a new Board</h3>
+<%= form_with(model: @board, local: true,  class: "form") do |f|%>
+  <%= f.label :Title%>
+  <%= f.text_field :boardtitle, class: "input" %>
+  <%= f.submit nil, class: "waves-effect waves-light btn-small" %>
+<%end%>

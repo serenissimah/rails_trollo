@@ -1,0 +1,7 @@
+<h1>Boards</h1>
+<% @boards.each do |board| %>
+  <div>
+  <p><%= link_to board.boardtitle, board_path(board) %>
+  </div>
+<% end %>
+<%= link_to "Add a new board", new_board_path, class: "waves-effect waves-light btn-small" %>
