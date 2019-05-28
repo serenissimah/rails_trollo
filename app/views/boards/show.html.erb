@@ -2,3 +2,18 @@
 
 <%= link_to "Edit", edit_board_path(@board), class: "bwaves-effect waves-light btn-small" %>
 <%= link_to "Delete", @board, method: :delete, class: "bwaves-effect waves-light btn-small" %>
+<br />
+<br />
+<br />
+<h4>Lists:</h4>
+<ul>
+  <% @board.lists.each do |list| %>
+    <li>
+      <%= link_to list.listname, [@board, list] %>
+    </li>
+  <% end %>
+</ul>
+<br />
+<br />
+<br />
+<%= link_to "Add new list", new_board_list_path(@board), class: "bwaves-effect waves-light btn-small" %>

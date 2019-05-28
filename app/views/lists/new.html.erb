@@ -1,0 +1,18 @@
+<h1>Add new list</h1>
+<%= form_for [@board, @list] do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :listname, required: true, autofocus: true %>
+  </div>
+  <p>
+  <label>
+    <input type="checkbox" />
+    <span>Priority</span>
+    <%= f.check_box :priority, {}, 'true', 'false' %>
+  </label>
+</p>
+<p>
+<br />
+
+  <%= f.submit nil, class: "waves-effect waves-light btn-small" %>
+<% end %>
